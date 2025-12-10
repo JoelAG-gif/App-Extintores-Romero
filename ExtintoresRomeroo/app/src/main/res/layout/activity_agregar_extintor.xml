@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛒 Agregar Extintor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona un producto del catálogo"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Catálogo de productos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📦 Catálogo de Productos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:layout_margin="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="8dp"/>
+
+        <!-- Formulario de compra -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💳 Datos de Compra"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Ubicación -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Ubicación"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Ej: Oficina Principal"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Fecha de vencimiento -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Fecha de Vencimiento"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerVencimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Cantidad -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔢 Cantidad"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etCantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Cantidad"
+                    android:inputType="number"
+                    android:text="1"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Método de Pago -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰 Método de Pago"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#666"
+                    android:layout_marginBottom="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupPago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
+
+                    <RadioButton
+                        android:id="@+id/rbEfectivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💵 Efectivo"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/rbTarjeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💳 Tarjeta de Crédito/Débito"
+                        android:textSize="16sp"
+                        android:padding="12dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbTransferencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏦 Transferencia Bancaria"
+                        android:textSize="16sp"
+                        android:padding="12dp"/>
+                </RadioGroup>
+
+                <!-- Resumen -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#E8F5E9"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📋 Resumen de Compra"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"/>
+
+                    <TextView
+                        android:id="@+id/tvResumen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona un producto para ver el resumen"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnConfirmarCompra"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="✅ CONFIRMAR COMPRA"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

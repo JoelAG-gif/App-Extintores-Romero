@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente: Juan Pérez"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: juan@gmail.com"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvExtintor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extintor: PQS ABC - 6kg"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación: Oficina"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvFechaServicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha: 2025-12-01 10:00"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado: Pendiente"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTecnico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Técnico: Sin asignar"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
